@@ -1,7 +1,5 @@
 
-
-
-let produtos = ['banana', 'uva', 'mamão']
+let produtos = ['banana', 'uva', 'mamão', 'melão', 'abacaxi']
 
 function mostrarLista(produtos) {
     let listaEl = document.getElementById("lista")
