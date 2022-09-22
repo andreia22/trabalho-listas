@@ -1,14 +1,18 @@
 
-let produtos = ['banana', 'uva', 'mamão', 'melão', 'abacaxi']
+let listaPessoas = [
+    { nome: "João", prioritario: false },
+    { nome: "Jubileu", prioritario: true },
+    { nome: "Januario", prioritario: false },
+  ]
 
-function mostrarLista(produtos) {
+function mostrarLista(listaPessoas) {
     let listaEl = document.getElementById("lista")
     let conteudo = ""
-    produtos.forEach(produto => {
+    listaPessoas.forEach(listaPessoas=> {
         conteudo += ` 
                 <li class='task-item'>
-                    ${produto}
-                    <button class="deletar-item" onclick='deletarItem("${produto}")'> deletar 
+                    ${listaPessoas}
+                    <button class="deletar-item" onclick='deletarItem("${listaPessoas}")'> deletar 
                     </button>  
                 </li>         
                 `
@@ -18,14 +22,14 @@ function mostrarLista(produtos) {
 adicionarItem()
 
 function deletarItem(produtoParaDeletar) {
-    produtos = produtos.filter(produto => produto != produtoParaDeletar)
-    mostrarLista(produtos)
-    
+    listaPessoas = listaPessoas.filter(listaPessoas > listaPessoas != produtoParaDeletar)
+    mostrarLista(listaPessoas)
 }
+    
 function adicionarItem() {
     let produtoInput = document.getElementById('idInput')
-    produtos.push(produtoInput.value)
-    mostrarLista(produtos)
+    listaPessoas.push([produtoInput.value])
+    mostrarLista(listaPessoas)
     produtoInput.value = ""
 }
 
